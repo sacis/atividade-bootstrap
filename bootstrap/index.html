@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estúdio Maré | Fotografia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="visually-hidden-focusable" href="#conteudo">Pular para o conteúdo</a>
+
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark" aria-label="Menu principal">
+      <div class="container">
+        <a class="navbar-brand" href="#">Estúdio Maré</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+            <li class="nav-item"><a class="nav-link" href="#precos">Preços</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section id="portfolio" class="container py-5">
+      <h1 class="h2">Fotografia de retrato, eventos e produto</h1>
+      <p class="text-secondary mb-4">Estúdio pequeno no Rio Vermelho, em Salvador. Alguns trabalhos recentes:</p>
+
+      <div id="carrosselPortfolio" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carrosselPortfolio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Foto 1"></button>
+          <button type="button" data-bs-target="#carrosselPortfolio" data-bs-slide-to="1" aria-label="Foto 2"></button>
+          <button type="button" data-bs-target="#carrosselPortfolio" data-bs-slide-to="2" aria-label="Foto 3"></button>
+        </div>
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active">
+            <img src="img/lago.jpg" class="d-block w-100" alt="Mulher remando uma canoa em um lago cercado por pinheiros">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="h5">Ensaio externo</h2>
+              <p>Passeio de canoa logo cedo, com a água ainda parada.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/falesias.jpg" class="d-block w-100" alt="Falésias à beira-mar vistas de cima">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="h5">Paisagem</h2>
+              <p>Litoral visto do mirante, fim de tarde.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/rua.jpg" class="d-block w-100" alt="Jovem de mochila caminhando em uma rua movimentada">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="h5">Fotografia de rua</h2>
+              <p>Série feita em um mercado de bairro.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrosselPortfolio" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrosselPortfolio" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="servicos" class="bg-body-tertiary py-5">
+      <div class="container">
+        <h2 class="mb-4">Serviços</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+          <div class="col">
+            <article class="card h-100">
+              <img src="img/retrato.jpg" class="card-img-top" alt="Retrato de mulher com batom vermelho">
+              <div class="card-body">
+                <h3 class="card-title h5">Retrato</h3>
+                <p class="card-text">Sessão em estúdio com luz controlada. Serve para perfil profissional ou uso pessoal.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalServico"
+                        data-titulo="Retrato" data-descricao="Uma hora de sessão no estúdio, com até duas trocas de roupa. Você escolhe 15 fotos e recebe todas tratadas em até 7 dias.">
+                  Ver detalhes
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card h-100">
+              <img src="img/externo.jpg" class="card-img-top" alt="Pessoa de costas contra a luz do pôr do sol">
+              <div class="card-body">
+                <h3 class="card-title h5">Ensaio externo</h3>
+                <p class="card-text">Fotos ao ar livre, na praia, no Pelourinho ou em outro lugar que você preferir.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalServico"
+                        data-titulo="Ensaio externo" data-descricao="Duas horas de ensaio no local combinado, de preferência no início da manhã ou no fim da tarde. São 30 fotos tratadas, entregues em até 10 dias.">
+                  Ver detalhes
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card h-100">
+              <img src="img/eventos.jpg" class="card-img-top" alt="Público com as mãos para cima em um show">
+              <div class="card-body">
+                <h3 class="card-title h5">Eventos</h3>
+                <p class="card-text">Aniversários, formaturas, shows e eventos de empresa.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalServico"
+                        data-titulo="Eventos" data-descricao="Cobertura de até 4 horas com cerca de 150 fotos tratadas. Hora extra é cobrada à parte. Entrega por link em até 15 dias.">
+                  Ver detalhes
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card h-100">
+              <img src="img/produto.jpg" class="card-img-top" alt="Café sendo passado em coador de vidro">
+              <div class="card-body">
+                <h3 class="card-title h5">Produto</h3>
+                <p class="card-text">Fotos para cardápio, loja virtual e redes sociais.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalServico"
+                        data-titulo="Produto" data-descricao="Até 10 produtos fotografados no estúdio, com fundo neutro ou ambientado. São 20 fotos tratadas, entregues em até 5 dias.">
+                  Ver detalhes
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="precos" class="container py-5">
+      <h2 class="mb-4">Pacotes e valores</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle">
+          <caption>Valores válidos para Salvador e região metropolitana.</caption>
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">Pacote</th>
+              <th scope="col">Duração</th>
+              <th scope="col">Fotos tratadas</th>
+              <th scope="col">Prazo de entrega</th>
+              <th scope="col">Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Retrato individual</th>
+              <td>1h</td>
+              <td>15</td>
+              <td>7 dias</td>
+              <td>R$ 280</td>
+            </tr>
+            <tr>
+              <th scope="row">Ensaio externo</th>
+              <td>2h</td>
+              <td>30</td>
+              <td>10 dias</td>
+              <td>R$ 450</td>
+            </tr>
+            <tr>
+              <th scope="row">Casal ou família</th>
+              <td>2h</td>
+              <td>40</td>
+              <td>10 dias</td>
+              <td>R$ 520</td>
+            </tr>
+            <tr>
+              <th scope="row">Gestante</th>
+              <td>1h30</td>
+              <td>25</td>
+              <td>10 dias</td>
+              <td>R$ 480</td>
+            </tr>
+            <tr>
+              <th scope="row">Produto (até 10 itens)</th>
+              <td>3h</td>
+              <td>20</td>
+              <td>5 dias</td>
+              <td>R$ 350</td>
+            </tr>
+            <tr>
+              <th scope="row">Evento</th>
+              <td>4h</td>
+              <td>150</td>
+              <td>15 dias</td>
+              <td>R$ 1.200</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="contato" class="bg-body-tertiary py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <h2>Contato</h2>
+            <p>Mande uma mensagem com o tipo de ensaio e a data que você tem em mente. Respondo em até um dia útil.</p>
+            <address class="mb-0">
+              Rua da Paciência, 120 - Rio Vermelho<br>
+              Salvador - BA<br>
+              (71) 99999-0000<br>
+              Segunda a sábado, das 9h às 18h
+            </address>
+          </div>
+
+          <div class="col-lg-8">
+            <div id="msgEnviado" class="alert alert-success d-none" role="status">
+              Mensagem enviada! Logo entro em contato.
+            </div>
+            <form id="formContato" class="row g-3">
+              <div class="col-md-6">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" required minlength="3">
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="col-md-6">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(71) 90000-0000">
+              </div>
+              <div class="col-md-6">
+                <label for="servico" class="form-label">Serviço</label>
+                <select class="form-select" id="servico" name="servico" required>
+                  <option value="">Escolha...</option>
+                  <option>Retrato</option>
+                  <option>Ensaio externo</option>
+                  <option>Eventos</option>
+                  <option>Produto</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="data" class="form-label">Data desejada</label>
+                <input type="date" class="form-control" id="data" name="data">
+              </div>
+              <div class="col-12">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-dark">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal fade" id="modalServico" tabindex="-1" aria-labelledby="modalServicoTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="modalServicoTitulo">Serviço</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-dark" id="btnAgendar" data-bs-dismiss="modal">Quero agendar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white-50 py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <p class="mb-0">&copy; 2026 Estúdio Maré</p>
+      <p class="mb-0">Instagram: @estudiomare</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

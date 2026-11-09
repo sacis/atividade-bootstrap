@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estúdio Maré | Fotografia</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white">Pular para o conteúdo</a>
+
+  <header class="bg-gray-900 sticky top-0 z-40">
+    <nav class="max-w-6xl mx-auto px-4" aria-label="Menu principal">
+      <div class="flex items-center justify-between h-14">
+        <a href="#" class="text-white text-lg">Estúdio Maré</a>
+        <button id="btnMenu" type="button" class="lg:hidden text-gray-300 border border-gray-600 rounded px-2 py-1"
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <ul class="hidden lg:flex gap-6 text-gray-300">
+          <li><a href="#portfolio" class="hover:text-white">Portfólio</a></li>
+          <li><a href="#servicos" class="hover:text-white">Serviços</a></li>
+          <li><a href="#precos" class="hover:text-white">Preços</a></li>
+          <li><a href="#contato" class="hover:text-white">Contato</a></li>
+        </ul>
+      </div>
+      <ul id="menu" class="hidden lg:hidden pb-3 text-gray-300">
+        <li><a href="#portfolio" class="block py-2 hover:text-white">Portfólio</a></li>
+        <li><a href="#servicos" class="block py-2 hover:text-white">Serviços</a></li>
+        <li><a href="#precos" class="block py-2 hover:text-white">Preços</a></li>
+        <li><a href="#contato" class="block py-2 hover:text-white">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section id="portfolio" class="max-w-6xl mx-auto px-4 py-12 scroll-mt-14">
+      <h1 class="text-2xl md:text-3xl font-medium">Fotografia de retrato, eventos e produto</h1>
+      <p class="text-gray-500 mt-2 mb-6">Estúdio pequeno no Rio Vermelho, em Salvador. Alguns trabalhos recentes:</p>
+
+      <div id="carrossel" class="relative overflow-hidden rounded">
+        <div id="slides" class="flex transition-transform duration-700 ease-in-out">
+          <figure class="w-full shrink-0 relative">
+            <img src="img/lago.jpg" alt="Mulher remando uma canoa em um lago cercado por pinheiros" class="w-full h-60 sm:h-[450px] object-cover">
+            <figcaption class="hidden md:block absolute bottom-10 inset-x-0 text-center text-white [text-shadow:0_1px_4px_rgb(0_0_0/0.8)]">
+              <h2 class="text-xl">Ensaio externo</h2>
+              <p>Passeio de canoa logo cedo, com a água ainda parada.</p>
+            </figcaption>
+          </figure>
+          <figure class="w-full shrink-0 relative">
+            <img src="img/falesias.jpg" alt="Falésias à beira-mar vistas de cima" class="w-full h-60 sm:h-[450px] object-cover">
+            <figcaption class="hidden md:block absolute bottom-10 inset-x-0 text-center text-white [text-shadow:0_1px_4px_rgb(0_0_0/0.8)]">
+              <h2 class="text-xl">Paisagem</h2>
+              <p>Litoral visto do mirante, fim de tarde.</p>
+            </figcaption>
+          </figure>
+          <figure class="w-full shrink-0 relative">
+            <img src="img/rua.jpg" alt="Jovem de mochila caminhando em uma rua movimentada" class="w-full h-60 sm:h-[450px] object-cover">
+            <figcaption class="hidden md:block absolute bottom-10 inset-x-0 text-center text-white [text-shadow:0_1px_4px_rgb(0_0_0/0.8)]">
+              <h2 class="text-xl">Fotografia de rua</h2>
+              <p>Série feita em um mercado de bairro.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <button type="button" data-direcao="-1" class="seta absolute inset-y-0 left-0 px-4 text-white text-4xl opacity-70 hover:opacity-100" aria-label="Anterior">&lsaquo;</button>
+        <button type="button" data-direcao="1" class="seta absolute inset-y-0 right-0 px-4 text-white text-4xl opacity-70 hover:opacity-100" aria-label="Próximo">&rsaquo;</button>
+
+        <div class="absolute bottom-3 inset-x-0 flex justify-center gap-2">
+          <button type="button" class="ponto w-8 h-1 bg-white" aria-label="Foto 1"></button>
+          <button type="button" class="ponto w-8 h-1 bg-white" aria-label="Foto 2"></button>
+          <button type="button" class="ponto w-8 h-1 bg-white" aria-label="Foto 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="bg-gray-100 py-12 scroll-mt-14">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-2xl font-medium mb-6">Serviços</h2>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="bg-white border rounded flex flex-col">
+            <img src="img/retrato.jpg" alt="Retrato de mulher com batom vermelho" class="rounded-t">
+            <div class="p-4 flex-1">
+              <h3 class="text-lg font-medium mb-2">Retrato</h3>
+              <p>Sessão em estúdio com luz controlada. Serve para perfil profissional ou uso pessoal.</p>
+            </div>
+            <div class="px-4 pb-4">
+              <button type="button" class="abrir-modal border border-gray-800 rounded px-3 py-1 text-sm hover:bg-gray-800 hover:text-white"
+                      data-titulo="Retrato" data-descricao="Uma hora de sessão no estúdio, com até duas trocas de roupa. Você escolhe 15 fotos e recebe todas tratadas em até 7 dias.">
+                Ver detalhes
+              </button>
+            </div>
+          </article>
+          <article class="bg-white border rounded flex flex-col">
+            <img src="img/externo.jpg" alt="Pessoa de costas contra a luz do pôr do sol" class="rounded-t">
+            <div class="p-4 flex-1">
+              <h3 class="text-lg font-medium mb-2">Ensaio externo</h3>
+              <p>Fotos ao ar livre, na praia, no Pelourinho ou em outro lugar que você preferir.</p>
+            </div>
+            <div class="px-4 pb-4">
+              <button type="button" class="abrir-modal border border-gray-800 rounded px-3 py-1 text-sm hover:bg-gray-800 hover:text-white"
+                      data-titulo="Ensaio externo" data-descricao="Duas horas de ensaio no local combinado, de preferência no início da manhã ou no fim da tarde. São 30 fotos tratadas, entregues em até 10 dias.">
+                Ver detalhes
+              </button>
+            </div>
+          </article>
+          <article class="bg-white border rounded flex flex-col">
+            <img src="img/eventos.jpg" alt="Público com as mãos para cima em um show" class="rounded-t">
+            <div class="p-4 flex-1">
+              <h3 class="text-lg font-medium mb-2">Eventos</h3>
+              <p>Aniversários, formaturas, shows e eventos de empresa.</p>
+            </div>
+            <div class="px-4 pb-4">
+              <button type="button" class="abrir-modal border border-gray-800 rounded px-3 py-1 text-sm hover:bg-gray-800 hover:text-white"
+                      data-titulo="Eventos" data-descricao="Cobertura de até 4 horas com cerca de 150 fotos tratadas. Hora extra é cobrada à parte. Entrega por link em até 15 dias.">
+                Ver detalhes
+              </button>
+            </div>
+          </article>
+          <article class="bg-white border rounded flex flex-col">
+            <img src="img/produto.jpg" alt="Café sendo passado em coador de vidro" class="rounded-t">
+            <div class="p-4 flex-1">
+              <h3 class="text-lg font-medium mb-2">Produto</h3>
+              <p>Fotos para cardápio, loja virtual e redes sociais.</p>
+            </div>
+            <div class="px-4 pb-4">
+              <button type="button" class="abrir-modal border border-gray-800 rounded px-3 py-1 text-sm hover:bg-gray-800 hover:text-white"
+                      data-titulo="Produto" data-descricao="Até 10 produtos fotografados no estúdio, com fundo neutro ou ambientado. São 20 fotos tratadas, entregues em até 5 dias.">
+                Ver detalhes
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="precos" class="max-w-6xl mx-auto px-4 py-12 scroll-mt-14">
+      <h2 class="text-2xl font-medium mb-6">Pacotes e valores</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full min-w-[600px] text-left">
+          <caption class="caption-bottom text-sm text-gray-500 text-left pt-2">Valores válidos para Salvador e região metropolitana.</caption>
+          <thead class="bg-gray-900 text-white">
+            <tr>
+              <th scope="col" class="p-3">Pacote</th>
+              <th scope="col" class="p-3">Duração</th>
+              <th scope="col" class="p-3">Fotos tratadas</th>
+              <th scope="col" class="p-3">Prazo de entrega</th>
+              <th scope="col" class="p-3">Valor</th>
+            </tr>
+          </thead>
+          <tbody class="[&_td]:p-3 [&_th]:p-3 [&_th]:font-medium">
+            <tr class="odd:bg-gray-100 hover:bg-gray-200">
+              <th scope="row">Retrato individual</th>
+              <td>1h</td>
+              <td>15</td>
+              <td>7 dias</td>
+              <td>R$ 280</td>
+            </tr>
+            <tr class="odd:bg-gray-100 hover:bg-gray-200">
+              <th scope="row">Ensaio externo</th>
+              <td>2h</td>
+              <td>30</td>
+              <td>10 dias</td>
+              <td>R$ 450</td>
+            </tr>
+            <tr class="odd:bg-gray-100 hover:bg-gray-200">
+              <th scope="row">Casal ou família</th>
+              <td>2h</td>
+              <td>40</td>
+              <td>10 dias</td>
+              <td>R$ 520</td>
+            </tr>
+            <tr class="odd:bg-gray-100 hover:bg-gray-200">
+              <th scope="row">Gestante</th>
+              <td>1h30</td>
+              <td>25</td>
+              <td>10 dias</td>
+              <td>R$ 480</td>
+            </tr>
+            <tr class="odd:bg-gray-100 hover:bg-gray-200">
+              <th scope="row">Produto (até 10 itens)</th>
+              <td>3h</td>
+              <td>20</td>
+              <td>5 dias</td>
+              <td>R$ 350</td>
+            </tr>
+            <tr class="odd:bg-gray-100 hover:bg-gray-200">
+              <th scope="row">Evento</th>
+              <td>4h</td>
+              <td>150</td>
+              <td>15 dias</td>
+              <td>R$ 1.200</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="contato" class="bg-gray-100 py-12 scroll-mt-14">
+      <div class="max-w-6xl mx-auto px-4 grid gap-10 lg:grid-cols-3">
+        <div>
+          <h2 class="text-2xl font-medium mb-3">Contato</h2>
+          <p class="mb-4">Mande uma mensagem com o tipo de ensaio e a data que você tem em mente. Respondo em até um dia útil.</p>
+          <address class="not-italic">
+            Rua da Paciência, 120 - Rio Vermelho<br>
+            Salvador - BA<br>
+            (71) 99999-0000<br>
+            Segunda a sábado, das 9h às 18h
+          </address>
+        </div>
+
+        <div class="lg:col-span-2">
+          <div id="msgEnviado" class="hidden mb-4 p-3 rounded bg-green-100 text-green-800 border border-green-300" role="status">
+            Mensagem enviada! Logo entro em contato.
+          </div>
+          <form id="formContato" class="grid gap-4 md:grid-cols-2">
+            <div>
+              <label for="nome" class="block mb-1">Nome</label>
+              <input type="text" id="nome" name="nome" required minlength="3" class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-400">
+            </div>
+            <div>
+              <label for="email" class="block mb-1">E-mail</label>
+              <input type="email" id="email" name="email" required class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-400">
+            </div>
+            <div>
+              <label for="telefone" class="block mb-1">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(71) 90000-0000" class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-400">
+            </div>
+            <div>
+              <label for="servico" class="block mb-1">Serviço</label>
+              <select id="servico" name="servico" required class="w-full border rounded px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-gray-400">
+                <option value="">Escolha...</option>
+                <option>Retrato</option>
+                <option>Ensaio externo</option>
+                <option>Eventos</option>
+                <option>Produto</option>
+              </select>
+            </div>
+            <div>
+              <label for="data" class="block mb-1">Data desejada</label>
+              <input type="date" id="data" name="data" class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-400">
+            </div>
+            <div class="md:col-span-2">
+              <label for="mensagem" class="block mb-1">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="4" required class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gray-400"></textarea>
+            </div>
+            <div class="md:col-span-2">
+              <button type="submit" class="bg-gray-900 text-white rounded px-4 py-2 hover:bg-gray-700">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="modalServico" aria-labelledby="modalServicoTitulo" class="rounded w-full max-w-md backdrop:bg-black/50">
+    <div class="p-5">
+      <div class="flex justify-between items-start border-b pb-3">
+        <h2 id="modalServicoTitulo" class="text-xl font-medium">Serviço</h2>
+        <button type="button" class="fechar-modal text-2xl leading-none text-gray-500 hover:text-gray-800" aria-label="Fechar">&times;</button>
+      </div>
+      <p id="modalServicoTexto" class="py-4"></p>
+      <div class="flex justify-end gap-2 border-t pt-3">
+        <button type="button" class="fechar-modal border rounded px-4 py-2 hover:bg-gray-100">Fechar</button>
+        <button type="button" id="btnAgendar" class="bg-gray-900 text-white rounded px-4 py-2 hover:bg-gray-700">Quero agendar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="bg-gray-900 text-gray-400 py-6">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-2">
+      <p>&copy; 2026 Estúdio Maré</p>
+      <p>Instagram: @estudiomare</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
